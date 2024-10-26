@@ -33,13 +33,6 @@ public class EmployeeService {
         return employeeRepository.save(entity).map(employeeMapper::toDto);
     }
 
-    /*public Mono<EmployeeDTO> createEmployee(EmployeeDTO employee) {
-        Employee entity = employeeMapper.toEntity(employee);
-        entity = employeeJPARepository.save(entity);
-        employee = employeeMapper.toDto(entity);
-        return Mono.just(employee);
-    }*/
-
     /**
      * R2DBC provide R2dbcEntityTemplate which have Insert, Update, Get and Delete methods
      * here we can pass directly the entity
